@@ -12,4 +12,9 @@ public class OverviewPage extends BasePage {
     public boolean hasLogoutLink(){
         return getWebElements(By.cssSelector("[href*='logout']")).size() > 0;
     }
+
+    public OpenAccountPage clickOpenNewAccountLink(){
+        getWebElement(By.cssSelector("a[href*=\"openaccount.htm\"]")).click();
+        return getInstance(OpenAccountPage.class);
+    }
 }
